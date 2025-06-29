@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, redirect
 import sqlite3
 
 app = Flask(__name__)
+init_db()
+
 
 # Inicializa o banco de dados
 def init_db():
