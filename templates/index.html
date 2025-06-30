@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca Online</title>
+</head>
+<body>
+    <h1>Bem-vindo(a) à Biblioteca!</h1>
+
+
+    <h2>Livros Disponíveis</h2>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Ações</th>
+        </tr>
+        {% for livro in livros %}
+        <tr>
+            <td>{{ livro[0] }}</td>
+            <td>{{ livro[1] }}</td>
+            <td>
+                {% if livro[2] %}
+    <a href="{{ url_for('static', filename='pdfs/' + livro[2]) }}" target="_blank">📖 Ler</a>
+{% else %}
+    <em>PDF não disponível</em>
+{% endif %}
+
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/adicionar">➕ Adicionar novo livro</a> |
+    <a href="/logout">Sair</a>
+</body>
+</html>

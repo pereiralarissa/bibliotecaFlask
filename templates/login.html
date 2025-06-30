@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        body { font-family: Arial; padding: 40px; }
+        form { max-width: 400px; margin: auto; }
+        input, button {
+            width: 100%; padding: 10px; margin: 10px 0;
+            border-radius: 5px; border: 1px solid #ccc;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+        a { display: block; text-align: center; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Login</h1>
+    <form method="POST">
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <input type="password" name="senha" placeholder="Sua senha" required>
+        <button type="submit">Entrar</button>
+    </form>
+    <a href="/registro">Criar nova conta</a>
+</body>
+</html>

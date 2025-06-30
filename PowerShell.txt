@@ -1,0 +1,6 @@
+git add requirements.txt
+git commit -m "Corrigido nome do arquivo requirements.txt"
+git push
+
+
+
